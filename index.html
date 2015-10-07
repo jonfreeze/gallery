@@ -3,37 +3,27 @@
 <head>
 	<title>Gallery</title>
 
-	<style type="text/css">
-		.grid-item { width: 300px; }
-		.grid-item img {
-			max-width: 100%;
-		}
-		.grid-item--width2 { width: 400px; }
-	</style>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
 <body>
-<div class="grid">
-  <div class="grid-item"><img src="images/phone.png"></div>
-  <div class="grid-item grid-item--width2"><img src="images/a-rod.jpg"></div>
-  <div class="grid-item"><img src="images/bagel.jpg"></div>
-  <div class="grid-item"><img src="images/phone.png"></div>
-  <div class="grid-item grid-item--width2"><img src="images/a-rod.jpg"></div>
-  <div class="grid-item"><img src="images/bagel.jpg"></div>
-</div>
+<div class="container">
+
+	<div class="grid">
+	  <div class="grid-item"><img src="images/phone.png"></div>
+	  <div class="grid-item grid-item--width2"><img src="images/a-rod.jpg"></div>
+	  <div class="grid-item"><img src="images/bagel.jpg"></div>
+	  <div class="grid-item"><img src="images/phone.png"></div>
+	  <div class="grid-item grid-item--width2"><img src="images/a-rod.jpg"></div>
+	  <div class="grid-item"><img src="images/bagel.jpg"></div>
+	</div>
+
+</div><!-- end container -->
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.grid').masonry({
-		  // options
-		  itemSelector: '.grid-item',
-		  columnWidth: 200
-		});
-	});
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
