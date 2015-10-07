@@ -3,42 +3,37 @@
 <head>
 	<title>Gallery</title>
 
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-
 	<style type="text/css">
-	img {
-		height: auto;
-		width: 100%;
-	}
+		.grid-item { width: 300px; }
+		.grid-item img {
+			max-width: 100%;
+		}
+		.grid-item--width2 { width: 400px; }
 	</style>
 
 </head>
 <body>
-<div class="container">
-	<div class="row">
-		<div class="col-md-4 col-xs-12">
-			<img src="images/coffee-beans.jpg">
-			<p>div.col-md-12</p>
-		</div>
-		<div class="col-md-4 col-xs-12">
-			<img src="images/bagel.jpg">
-			<p>div.col-md-12</p>
-		</div>
-		<div class="col-md-4 col-xs-12">
-		<div class="imageWrapper">
-			<img src="images/a-rod.jpg">
-		</div>
-			<p>div.col-md-12</p>
-		</div>
-		<div class="col-md-4 col-xs-12">
-			<img src="images/checkmark.png">
-			<p>div.col-md-12</p>
-		</div>
-		<div class="col-md-4 col-xs-12">
-			<img src="images/logo.png">
-			<p>div.col-md-12</p>
-		</div>
-	</div>
+<div class="grid">
+  <div class="grid-item"><img src="images/phone.png"></div>
+  <div class="grid-item grid-item--width2"><img src="images/a-rod.jpg"></div>
+  <div class="grid-item"><img src="images/bagel.jpg"></div>
+  <div class="grid-item"><img src="images/phone.png"></div>
+  <div class="grid-item grid-item--width2"><img src="images/a-rod.jpg"></div>
+  <div class="grid-item"><img src="images/bagel.jpg"></div>
 </div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.grid').masonry({
+		  // options
+		  itemSelector: '.grid-item',
+		  columnWidth: 200
+		});
+	});
+</script>
+
 </body>
 </html>
